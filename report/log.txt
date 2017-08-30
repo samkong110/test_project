@@ -1,0 +1,30 @@
+D:\Python\lib\unittest\case.py:503: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if not first == second:
+FE
+======================================================================
+ERROR: test_baidu (test_youdao.MyTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\test_project\test_case\test_youdao.py", line 15, in test_baidu
+    driver.get(self.base_url + "/")
+  File "D:\Python\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "D:\Python\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: Failed to decode response from marionette
+
+
+======================================================================
+FAIL: test_baidu (test_baidu.MyTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\test_project\test_case\test_baidu.py", line 21, in test_baidu
+    self.assertEqual(title,"unittest_百度搜索")
+AssertionError: u'unittest_\u767e\u5ea6\u641c\u7d22' != 'unittest_\xe7\x99\xbe\xe5\xba\xa6\xe6\x90\x9c\xe7\xb4\xa2'
+
+----------------------------------------------------------------------
+Ran 2 tests in 48.764s
+
+FAILED (failures=1, errors=1)
